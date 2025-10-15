@@ -70,7 +70,7 @@ if uploaded_image is not None:
         # Button to trigger classification
         if st.button('Classify'):
             # Call function to classify the uploaded image
-            prediction = classify_image(uploaded_image)
+            prediction = predict_image_class(model, uploaded_image, class_indices)
             # Display the prediction result
             st.success(f'Prediction: {prediction}')
 
